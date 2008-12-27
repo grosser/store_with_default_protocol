@@ -1,7 +1,7 @@
 Problem
 =======
-Website or url columns have to be stored with a protocol to be used.
-Most 'evil' users do not bother to add http:// to their urls.
+ - Website or url columns have to be stored with a protocol to be used.
+ - Most 'evil' users do not bother to add http:// to their urls.
 
 Solution
 ========
