@@ -1,0 +1,1 @@
+require 'store_with_default_protocol'
