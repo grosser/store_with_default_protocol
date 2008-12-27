@@ -43,4 +43,12 @@ describe :store_with_default_protocol do
     @user.overwritten_url = 'x'
     @user.overwritten_url.should == 'http://x-1'
   end
+  it "does not store protocol for nil values" do
+    @user.website = nil
+    @user.website.should == nil
+  end
+  it "does not store protocol for blank values" do
+    @user.website = "  "
+    @user.website.should == "  "
+  end
 end

@@ -14,7 +14,9 @@ END
       #alias_method_chain the setter...
       class_eval <<END
         def #{column}_with_default_protocol=(value)
-          value = "#{protocol}://"+value.to_s unless value.include?('://')
+          if value and not value.blank? and not value.include?('://')
+            value = "#{protocol}://"+value.to_s
+          end
           self.#{column}_without_default_protocol = value
         end
         alias_method_chain :#{setter}, :default_protocol
